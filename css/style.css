@@ -1,0 +1,68 @@
+  :root {
+      --primary:  #17a2b7;;
+      --primary-dark:  #17a2b7;;
+      --secondary: #f8f9fc;
+     
+      --light: #ffffff;
+    }
+    
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fc;
+    }
+
+
+  
+    .hero {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      padding: 4rem 0;
+    }
+    
+    .pricing-card {
+      border: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+    
+    .pricing-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .pricing-card.featured {
+      border: 2px solid var(--primary);
+      position: relative;
+    }
+    
+    .featured-badge {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--primary);
+      color: white;
+      padding: 5px 20px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+    }
+    
+    .navbar-dark {
+      background-color: #1a1a1a !important;
+    }
+
+
+    .section-header {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      padding: 4rem 0;
+    }
+
+     .navbar-dark {
+      background-color: #1a1a1a !important;
+    }
+    
+    footer {
+      background: #1a1a1a;
+      color: white;
+      padding: 2rem 0;
+    }

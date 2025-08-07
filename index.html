@@ -1,216 +1,1312 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>SG-Yia | Sistema de Gestão Inteligente</title>
   <link href="./css/bootstrap.min.css" rel="stylesheet">
   <link href="./css/style.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css   ">
+  <link href="./css/header.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
   <style>
-   
-    
-    .hero p {
-      font-size: 1.2rem;
-      opacity: 0.9;
-      max-width: 600px;
-      margin-bottom: 2rem;
+    :root {
+      --primary: #17a2b7;
+      --primary-dark: #17a2b7;
+      --secondary: #fff;
+      --light: #ffffff;
     }
-    
+
+    /* NAVBAR */
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.4rem;
+      color: var(--primary) !important;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+
+    /* HERO (estilo Sergest) */
+    .hero {
+      background: #fff;
+      color: #000;
+      padding: 3rem 0;
+    }
+
+    @media (min-width: 768px) {
+      .hero {
+        padding: 6rem 0 5rem;
+      }
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .hero h1 {
+        font-size: 3rem;
+      }
+    }
+
+    .hero p {
+      font-size: 1rem;
+      opacity: .9;
+      margin-bottom: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .hero p {
+        font-size: 1.15rem;
+        margin-bottom: 2rem;
+      }
+    }
+
+    .hero-btn-primary, .hero-btn-primary2 {
+      font-weight: 600;
+      padding: .6rem 1rem;
+      border-radius: 10px;
+      border: none;
+      transition: .3s;
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+
+    @media (min-width: 576px) {
+      .hero-btn-primary, .hero-btn-primary2 {
+        width: auto;
+        margin-bottom: 0;
+      }
+    }
+
+    .hero-btn-primary {
+      background: #033e81;
+      color: #fff;
+    }
+
+    .hero-btn-primary:hover {
+      background: #ffffff;
+      color: var(--primary-dark);
+    }
+
+    .hero-btn-primary2 {
+      background: #ffffff;
+      color: #ff0000;
+      border: 1px solid #ff0000;
+    }
+
+    .hero-btn-primary2:hover {
+      background: #ff0000;
+      color: #fff;
+    }
+
+    .hero small {
+      display: block;
+      margin-top: .5rem;
+      font-size: .85rem;
+      opacity: .8;
+    }
+
+    .hero-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-top: 1.5rem;
+    }
+
     /* Features */
     .features {
-      padding: 5rem 0;
+      padding: 3rem 0;
       background-color: var(--secondary);
     }
-    
+
+    @media (min-width: 768px) {
+      .features {
+        padding: 5rem 0;
+      }
+    }
+
     .feature-card {
       background: var(--light);
-      border-radius: 10px;
-      padding: 2rem;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      border-radius: 5rem;
+      padding: 1.5rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, .10);
       height: 100%;
-      transition: transform 0.3s;
+      transition: transform .3s;
+      margin-bottom: 1rem;
     }
-    
+
+    @media (min-width: 768px) {
+      .feature-card {
+        padding: 2rem;
+        margin-bottom: 0;
+      }
+    }
+
     .feature-card:hover {
       transform: translateY(-10px);
     }
-    
-    .feature-icon {
-      font-size: 2.5rem;
-      color: var(--primary);
-      margin-bottom: 1.5rem;
-    }
-    
-    /* CTA Section */
+
+    /* CTA & Footer */
     .cta {
-      background: var(--dark);
-      color: white;
-      padding: 4rem 0;
-    }
-    
-    /* Footer */
-    footer {
       background: #1a1a1a;
       color: white;
       padding: 3rem 0;
     }
-    
-    .social-icons a {
-      color: white;
-      font-size: 1.5rem;
-      margin-right: 1rem;
-    }
-    
-    /* Responsividade */
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.5rem;
+
+    @media (min-width: 768px) {
+      .cta {
+        padding: 4rem 0;
       }
-      
-      .hero p {
+    }
+
+    .en, .en2 {
+      background-color: #00cddf;
+      color: #fff;
+      transition: all 1s;
+      border: none;
+      white-space: nowrap;
+    }
+
+    .en:hover, .en2:hover {
+      background:#034489;
+      color: #fff;
+    }
+
+    .en2 {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .palavra span {
+      font-size: 2rem;
+      font-weight: bold;
+      display: inline-block;
+      color: #00b0c0;
+    }
+
+    @media (min-width: 768px) {
+      .palavra span {
+        font-size: 3rem;
+      }
+    }
+
+    h2 {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      h2 {
+        font-size: 2rem;
+      }
+    }
+
+    .blue {
+      background: linear-gradient(to right, #00c4d9,#034489);
+    }
+
+    .pricing-card {
+      height: auto;
+      min-height: 23rem;
+      border: 0.1rem solid rgba(0, 0, 0, 0.1);
+      border-radius: 1.5rem;
+      box-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
+      margin-bottom: 2rem;
+      padding: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .pricing-card {
+        border-radius: 3rem;
+        margin-bottom: 4rem;
+        padding: 0.1rem;
+      }
+    }
+
+    .img {
+      width: 100%;
+      height: 6rem;
+    }
+
+    @media (min-width: 768px) {
+      .img {
+        height: 8rem;
+      }
+    }
+
+    .titulo {
+      margin-top: 0.3rem;
+      font-size: 1.2rem;
+    }
+
+    @media (min-width: 768px) {
+      .titulo {
+        font-size: 1.2rem;
+      }
+    }
+
+    .st {
+      font-size: 1.3rem;
+    }
+
+    @media (min-width: 768px) {
+      .st {
+        font-size: 1.3rem;
+      }
+    }
+
+    p, ul {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    @media (min-width: 768px) {
+      p, ul {
         font-size: 1rem;
       }
     }
+
+    .whit {
+      border: 0.1rem;
+      border-radius: 5rem;
+      background: linear-gradient(to right, #00c4d9,#034489);
+      font-size: 0.7rem;
+      padding: 0.1rem;
+      margin-left: 0;
+    }
+
+    @media (min-width: 768px) {
+      .whit {
+        font-size: 0.7rem;
+      }
+    }
+
+    .bg-light {
+      border: 0.1rem solid rgba(0, 0, 0, .12);
+      border-radius: 1.5rem;
+      box-shadow: 0.1rem 0.1rem 0.4rem rgba(0, 0, 0, .15);
+    }
+
+    @media (min-width: 768px) {
+      .bg-light {
+        border-radius: 3rem;
+      }
+    }
+
+    .pp {
+      margin-bottom: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .pp {
+        margin-bottom: 5rem;
+      }
+    }
+
+    /* Ajustes para mobile */
+    .feature-icon {
+      font-size: 1.5rem;
+      margin-right: 1rem;
+    }
+
+    .navbar-toggler {
+      padding: 0.25rem 0.5rem;
+      font-size: 1rem;
+    }
+
+    .btn {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    @media (min-width: 768px) {
+      .btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+      }
+    }
+
+    /* Ajustes para formulário de feedback */
+    #formFeedbackArea {
+      max-width: 100%;
+      margin: 1rem;
+    }
+
+    /* Footer mobile */
+    footer .col-lg-4, footer .col-lg-2, footer .col-md-4 {
+      margin-bottom: 1.5rem;
+    }
+
+    .social-icons a {
+      margin-right: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    /* Garantir que imagens não ultrapassem a largura da tela */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Ajustes para cards de recursos */
+    .d-flex {
+      flex-direction: column;
+    }
+
+    @media (min-width: 768px) {
+      .d-flex {
+        flex-direction: row;
+      }
+    }
+
+    .flex-grow-1 {
+      margin-top: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .flex-grow-1 {
+        margin-top: 0;
+        margin-left: 1rem;
+      }
+    }
+
+
+
+    
   </style>
 </head>
+
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <!-- Navbar atualizada -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="#">
-        <h3 class="m-0">SG-Yia</h3>
-      </a>
+      <a class="navbar-brand active fw-bold text-primary fs-3" href="index.html">SG-Yia</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="recursos.html">Recursos</a></li>
-          <li class="nav-item"><a class="nav-link" href="solucoes.html">Soluções</a></li>
-          <li class="nav-item"><a class="nav-link" href="PRECOS.HTML">Preços</a></li>
-          <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link fw-semibold" href="#pricing-section">Preços</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="#solution">Soluções</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="#features">Recursos</a></li>
+          
+         
+          <li class="nav-item"><a class="nav-link fw-semibold" href="#about-company">Sobre</a></li>
+
+
+          <li class="nav-item"><a class="nav-link fw-semibold" href="#cont">Contato</a></li>
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+            <a class="btn en btn-outline-primary fw-semibold px-3" href="../GESTAO/login.php">Entrar agora →</a>
+          </li>
         </ul>
-        
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
+  <!-- Hero atualizada -->
+  <section class="hero bg-white py-5">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6">
-          <h1>Gestão Empresarial Simplificada</h1>
-          <p>O SG-Yia revoluciona a forma como você gerencia seu negócio com ferramentas poderosas e intuitivas para todas as áreas da sua empresa.</p>
-          <div class="d-flex gap-3">
-            <a href="#demo" class="btn btn-light btn-lg">Experimente Grátis</a>
-            <a href="#features" class="btn btn-outline-light btn-lg">Saiba Mais</a>
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-6 text-center text-lg-start">
+          <h1 class="display-5 fw-bold mb-3 palavra">
+            Gestão De <span>E</span><span>m</span><span>p</span><span>r</span><span>e</span><span>s</span><span>a</span> Online
+          </h1>
+          <p class="lead mb-4">
+            O SG-Yia revoluciona a forma como você gerencia seu negócio com ferramentas poderosas e intuitivas para todas as áreas da sua empresa.
+          </p>
+          <small class="text-muted mt-2 d-block">Teste o SG-Yia <span class="gra">gratuitamente</span> por <strong>15 dias</strong>. </small>
+          <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+            <button class="btn btn-primary ln px-4">Começar a usar</button>
+            <button class="btn ln2 btn-outline-danger px-4">Como usar</button>
           </div>
+         
         </div>
-        <div class="col-lg-6 d-none d-lg-block">
-          <img src="https://via.placeholder.com/600x400   " alt="Dashboard SG-Yia" class="img-fluid rounded shadow">
+        <div class="col-lg-6">
+          <img src="./img/bdprinc.jpg" alt="Dashboard SG-Yia" class="img-fluid rounded">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Features Section -->
+  <!-- Pricing Section -->
+  <section class="py-5">
+    <div class="container">
+      <h1 class="text-center display-5 fw-bold mb-3 palavra">Três Palavras & uma <span>Plataforma</span></h1>
+      <p class="text-center pp">Gestão da sua empresa pelo computador, <br> tablet ou telemóvel a qualquer hora.</p>
+      <div class="row g-4 justify-content-center">
+        <!-- Starter Plan -->
+        <div class="col-md-8 col-lg-4">
+          <div class="card pricing-card">
+            <div class="card-body p-4">
+              <div class="absolute top-0 bottom-0 left-0 right-0"> <img src="./img/agt -logop-CtBjrJw3.jpeg" class="img" alt=""></div>
+              <h5 class="fw-bold text-center titulo">Certificado pela AGT</h5>
+              <ul class="list-unstyled mb-4 mt-4">
+                <li class="mb-2"><i class="bi bi-check text-white whit me-2"></i>Documentos aceites pela AGT;</li>
+                <li class="mb-2"><i class="bi bi-check text-white whit me-2"></i>Cálculo de impostos;</li>
+                <li class="mb-2"><i class="bi bi-check text-white whit me-2"></i>Exportação do ficheiro SAF-T;</li>
+                <li class="mb-2"><i class="bi bi-check text-white whit me-2"></i>Software Certificado nº310</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Professional Plan -->
+        <div class="col-md-8 col-lg-4">
+          <div class="card pricing-card blue featured">
+            <div class="card-body p-4">
+              <div class="absolute top-0 bottom-0 left-0 right-0"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEkAAABJCAMAAABGrfvuAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAUFQTFRFAAAALNXkK9XkQNrnYeDrjOjxou30re/1ru/1gubvQdnnVt7ql+ryl+vzbeLtTNzpQNroLNblN9jmTdzpjenxo+30buLtQdrobOLtl+vyQNnngufwQtrnmOvyV93pgebvTN3pNtflmOvzNtjmmOryo+3zYt/rQdrnV97qTdvocOLtn+zzv/L33/j7r+/1gObvg+bvou3z////YODr7/z90Pb5wPP3YN/rbOLskOrxQdrnMdflkOnx3/n77/v9pO30QNrnoOzzeOXuQtrocOPtUN3poO3zwPL3sO/1MNflTtzpQNnnNtfmj+nxYuDsjejxMNblz/X5d+Xud+Tuz/b5MNblQNro4Pn7MdblMNflMdblYuDrQdnnK9blTNzon+3z0PX54Pj7gOfvgOXvoezzYeDsN9fmbeLsjOjwNdfmV9/riQmSdAAAAGt0Uk5TABQNk////////5r/////4JMUWub///+a//+T/6D////gU/9T////mv/m/////////////////////6A6/////5r//6D//////y3smlP///8t/////zOa/zMzOv+gDeD/////////Wv//Tf+WZzAFAAAFJklEQVR4nNWY608cVRTAz53dnYVFB/Yl3fIqNAUkWAVJrLHVoKKt1FaJtppGY/3gP6WmqZq0H9DEmI3FltjER6pRKTWk9EF5pA9Y6BJ2WWBfs947MztzX7Ms6peeD5OZe2d+c86595x77kXwfwl6VEkIgf4fSR6ExXyvVPLk1Y1/R6rLKajEtfm2CjsloRpiD/IRpVbxXRChvJrGqoGC5JrJSYofczSElrj2kFpM4Su6Xy2pFnMi62vSnzRvpbGR61WRwvi1yMaqlEMk+FgCoHFhe1LbImh1c64cQy+UENUSSLEkRO5V5BDRshB6UJGEBwtq5A5iBbsAKcwgsqT2+6AV3D3ESEsCPDSKJamo6U51HBPVPONCiiVbblcNAui413pLToolteUdgACiKWoEKVLnPMTmdkRCKiibIqlrDryZHYEAumeh47pAiiXl3u7BMVxS0LIs1uCZ6z0TPKl1CbLim7tDavk2r/4pQfmh7SZH8kNwUc5RSMokOSYf+E0gYfuyLOnAhKCSwVF86Ffy8AJCGSkrmrI0QHaDPyXRJ/Cz0+J9PiOx0VbKInm8rEoHFTJRvL+zX7WFyTXnZ2AvXWmfpkiRNJMAXjQ4gcu8KTBYIBPFR9v48i/m8FkkPxwcpzTaAK92ScAYMoRWIDpGNeDpmddtUv0WY1yvWveTnGP95y/6OZoyzDNJtTpj3ID+xAV30qtJaPyeetayRsggC8ukt35mzHgZegiI9vkb44ZBJskPATq/9UNI6qXhuLTb75COXmTctHsX+9MyZ8Gn/GGSipMsqVC0SOF1Ow6JNHRA+KIAehN70hwInhRLFgsW6djY4W+306kX56L8JMhItTqJD4OkZZmhe2tBJL09D/bM4EladvgbizQSP/o13SV6HIM6Rq37d2e4blMR5KhHk7hZgH1kg+DEbcjccCGNxFnSyVt2POwvTgE87QFq0uOZ2XnehbRrlV3AB9fM4TYYyj40TYPgcKLca8lI3CadGmXGjvy15yvj7v2ZAihZH3Sdc3oHdC7bUGMXXi/lmD7KUVgrYMZq+AE/ssfH9kxbpL13udTbqzoG7PeyGW9wjU0FZI6TqJXGHTHPUePQJuOWfshO8aQTXzq54OQXTOeAznmVVmmyyLR0zVG5oFZ3VmVDsHeavpOBnsvDU2fZJnPoLBIXwlg+ugaxuIR0epL3EjaIBLCTx/cw0xaOLIHMvnfucDFn5HHDyRZJMI84Pf+3BCTk5QMTZtFlkXDZyC/BeHHLt7IGYpOd8CuLH5j1rrxA0PLxVYC+z53noVVdAmpdQltAk7pneZ+bKLsSGJ7Hq3v/Z/w7uNq0ot+uVaKpvivCa4dIJdCIk1GPQqqNBnGdOPZDiatVSKVAZiqvVsapSet/FLqxl5Ca4khYTdm+Bp4NGCWjUiNdAalq2SEFN0sffip729PbuLEpq+eMQrChvHOjat9To2zRv73svWvbxtbjLQlx/CqKiqidALNHiKZ2hGJ3Auy+hSn6twe571vgk7Poyav8ftwdRFdvwk4xmgIhbGQSTiNn2KQkstcSC3NBcNHN75bEffDxC8jbdENopqVrFsHjK1yjZG+O4wZ8uvvMMg4lisJZhvS8IJIGCGlyvepzuvwQQH6G8crNBL72XeMVa3/tDP6gpW1c8o3buUpzaYUcz5xenho8b2TpzsX30BlD4ZoZ6RcVznq6V9LWO84MUz8457Z1r3z+FDpyOZeyQFrp9Uv8iU31JFOCAFWcITyyJ35VyT9IEbJZMyMUBAAAAABJRU5ErkJggg==" class="w-[4em] fa" alt=""> <strong class="st titulo text-white fw-bold">Fácil & seguro</strong>  </div>
+              <p class="text-white">SG-Yia integra-se diretamente ao Multicaixa Express — receba pagamentos em segundos, com criptografia de ponta a ponta que blinda os dados sensíveis da sua empresa.
+                Interface limpa, intuitiva e em português: qualquer colaborador navega, clica e conclui tarefas sem treino.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Enterprise Plan -->
+        <div class="col-md-8 col-lg-4">
+          <div class="card pricing-card">
+            <div class="card-body p-4">
+              <div class="absolute top-0 bottom-0 left-0 right-0">
+                <img src="data:image/png;base64,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" class="w-[4em]" alt=""><strong class="st titulo">Angolano</strong>
+              </div>
+              <p>SG-Yia, certificado AGT nº 310, gere tudo em conformidade com as leis fiscais angolanas: emite faturas eletrónicas, calcula impostos automaticamente, exporta SAF-T AO e envia dados em tempo real para a AGT — tudo numa única plataforma segura e 100 % legal.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+     
+    </div>
+  </section>
+
+<!-- Pricing Section -->
+<section id="pricing-section" class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="mb-3">Planos e Preços</h2>
+      <p class="lead">Escolha o plano ideal para seu negócio</p>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <!-- Starter Plan -->
+      <div class="col-md-8 col-lg-4">
+        <div class="card pricing-card featured ">
+          <div class="featured-badge fw-bold fs-6 mb-5">Starter</div>
+          <div class="card-body p-4 ">
+            <ul class="list-unstyled mb-4 mt-4">
+              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>Até 500 produtos</li>
+              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>1 usuário</li>
+              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>1 loja física</li>
+              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>NF-e e NFC-e</li>
+              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>Suporte via chat</li>
+              <li class="text-muted mb-2"><i class="bi bi-x text-white danger me-2"></i>E-commerce</li>
+              <li class="text-muted mb-2"><i class="bi bi-x text-white danger me-2"></i>Integrações</li>
+            </ul>
+            <h2 class="text-primary mb-3">6000 Kzs<span class="text-muted fs-6">/mês</span></h2>
+            <a href="#demost" class="btn btn-outline-primary w-100">Começar Grátis</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Professional Plan -->
+      <div class="col-md-8 col-lg-4">
+        <div class="card pricing-card featured ">
+          <div class="featured-badge fw-bold fs-6 mb-5">Professional</div>
+          <div class="card-body p-4 ">
+            <ul class="list-unstyled mb-4 mt-4">
+              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>Produtos ilimitados</li>
+              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>3 usuários</li>
+              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>3 lojas/filiais</li>
+              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>Tudo do Starter</li>
+              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>E-commerce B2C</li>
+              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>Integrações básicas</li>
+              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>Suporte prioritário</li>
+            </ul>
+            <h2 class="text-primary mb-3">26000 Kzs<span class="text-muted fs-6">/mês</span></h2>
+            <a href="#demost" class="btn btn-primary w-100">Começar Grátis</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Enterprise Plan -->
+      <div class="col-md-8 col-lg-4">
+        <div class="card pricing-card featured">
+          <div class="featured-badge fw-bold fs-6 mb-5">Enterprise</div>
+          <div class="card-body p-4 ">
+            <ul class="list-unstyled mb-4 mt-4">
+              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>Recursos ilimitados</li>
+              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>Usuários ilimitados</li>
+              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>Filiais ilimitadas</li>
+              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>Tudo do Professional</li>
+              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>E-commerce B2B/B2C</li>
+              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>API aberta</li>
+              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>Suporte dedicado</li>
+            </ul>
+            <h2 class="text-primary mb-3">49000 Kzs<span class="text-muted fs-6">/mês</span></h2>
+            <a href="#demost" class="btn btn-outline-primary w-100">Solicitar Proposta</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Custom Plan -->
+    <div class="row mt-5">
+      <div class="col-lg-8 mx-auto">
+        <div class="card bg-light">
+          <div class="card-body p-4 text-center">
+            <h4>Plano Personalizado</h4>
+            <p class="mb-4">Precisa de algo específico? Podemos criar um plano sob medida para sua empresa.</p>
+            <a href="contato.html" class="btn btn-primary">Fale com Especialista</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  
+
+
+
+
+
+  <!-- FAQ Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">Perguntas Frequentes</h2>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                  Posso mudar de plano quando quiser?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Sim! Você pode fazer upgrade ou downgrade do seu plano a qualquer momento. O valor é ajustado proporcionalmente ao período utilizado.
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                  Há taxa de implementação?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Não! A implementação é gratuita em todos os planos. Oferecemos treinamento completo e suporte durante todo o processo de migração.
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                  O que acontece após o período de teste?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Você pode escolher um plano e continuar usando normalmente. Se não quiser continuar, seus dados são mantidos por 30 dias caso mude de ideia.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Soluções -->
+
+<section id="solution" class="py-5">
+  <div class="container">
+    
+    <div class="row g-4">
+      <div class="text-center"><h1 class="display-5 fw-bold mb-3 palavra">
+        Soluções para seu <span>N</span><span>e</span><span>g</span><span>ó</span><span>c</span><span>i</span><span>o</span> 
+      </h1></div>
+      <div class="col-lg-4">
+        <div class="card solution-card h-100">
+          <div class="card-body p-4">
+            <div class="text-center mb-4">
+              <i class="bi bi-shop" style="font-size: 3rem; color: var(--primary);"></i>
+            </div>
+            <h4 class="card-title text-center">Comércio Varejista</h4>
+            <p class="card-text">Solução completa para lojas físicas e e-commerce. Controle de estoque, PDV, vendas online e integração com marketplaces.</p>
+            <ul class="list-unstyled">
+              <li><i class="bi bi-check-circle text-success me-2"></i>Gestão de estoque multi-canal</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>PDV integrado com NFC-e</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>E-commerce B2C e B2B</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Integração com marketplaces</li>
+            </ul>
+            <a href="#demost" class="btn btn-outline-primary w-100">Solicitar Demo</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4">
+        <div class="card solution-card h-100">
+          <div class="card-body p-4">
+            <div class="text-center mb-4">
+              <i class="bi bi-building" style="font-size: 3rem; color: var(--primary);"></i>
+            </div>
+            <h4 class="card-title text-center">Indústria</h4>
+            <p class="card-text">Controle completo da produção, desde a compra de matéria-prima até a entrega do produto final.</p>
+            <ul class="list-unstyled">
+              <li><i class="bi bi-check-circle text-success me-2"></i>Controle de produção e MRP</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Gestão de ordens de produção</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Controle de qualidade</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Rastreabilidade de lotes</li>
+            </ul>
+            <a href="#demost" class="btn btn-outline-primary w-100">Solicitar Demo</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4">
+        <div class="card solution-card h-100">
+          <div class="card-body p-4">
+            <div class="text-center mb-4">
+              <i class="bi bi-truck" style="font-size: 3rem; color: var(--primary);"></i>
+            </div>
+            <h4 class="card-title text-center">Distribuição</h4>
+            <p class="card-text">Otimização da cadeia logística e distribuição com controle de rotas, entregas e frotas.</p>
+            <ul class="list-unstyled">
+              <li><i class="bi bi-check-circle text-success me-2"></i>Roteirização inteligente</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Controle de frotas</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Rastreamento de entregas</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Gestão de motoristas</li>
+            </ul>
+            <a href="#demost" class="btn btn-outline-primary w-100">Solicitar Demo</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4">
+        <div class="card solution-card h-100">
+          <div class="card-body p-4">
+            <div class="text-center mb-4">
+              <i class="bi bi-hospital" style="font-size: 3rem; color: var(--primary);"></i>
+            </div>
+            <h4 class="card-title text-center">Serviços</h4>
+            <p class="card-text">Gestão de prestadores de serviço, agendamento e controle de atendimentos com foco na experiência do cliente.</p>
+            <ul class="list-unstyled">
+              <li><i class="bi bi-check-circle text-success me-2"></i>Agendamento online</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Controle de atendimentos</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Gestão de equipes</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Avaliação de clientes</li>
+            </ul>
+            <a href="#demost" class="btn btn-outline-primary w-100">Solicitar Demo</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4">
+        <div class="card solution-card h-100">
+          <div class="card-body p-4">
+            <div class="text-center mb-4">
+              <i class="bi bi-cash-coin" style="font-size: 3rem; color: var(--primary);"></i>
+            </div>
+            <h4 class="card-title text-center">Franquias</h4>
+            <p class="card-text">Gestão centralizada de múltiplas unidades com controle de royalties, vendas e operações padronizadas.</p>
+            <ul class="list-unstyled">
+              <li><i class="bi bi-check-circle text-success me-2"></i>Controle de royalties</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Padronização de operações</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Dashboard franqueador</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Comunicação franqueado</li>
+            </ul>
+            <a href="#demost" class="btn btn-outline-primary w-100">Solicitar Demo</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4">
+        <div class="card solution-card h-100">
+          <div class="card-body p-4">
+            <div class="text-center mb-4">
+              <i class="bi bi-laptop" style="font-size: 3rem; color: var(--primary);"></i>
+            </div>
+            <h4 class="card-title text-center">Startups</h4>
+            <p class="card-text">Solução escalável e econômica para empresas em crescimento com recursos essenciais e plano de expansão.</p>
+            <ul class="list-unstyled">
+              <li><i class="bi bi-check-circle text-success me-2"></i>Plano de crescimento</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Recursos essenciais</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Custo acessível</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Escalabilidade garantida</li>
+            </ul>
+            <a href="#demost" class="btn btn-outline-primary w-100">Solicitar Demo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- Features – permanece idêntico -->
   <section class="features" id="features">
     <div class="container">
       <div class="text-center mb-5">
-        <h2 class="mb-3">Recursos Poderosos</h2>
+        <h2 class="mb-3 palavra"><span>Recursos  </span> Poderosos</h2>
         <p class="lead">Tudo o que você precisa para gerenciar seu negócio com eficiência</p>
       </div>
-      
       <div class="row g-4">
-        <div class="col-md-4">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="bi bi-graph-up"></i>
+        <!-- cards iguais ao original -->
+
+        <!-- Dashboard Inteligente -->
+        <div class="col-md-6">
+          <div class="d-flex">
+            <div class="flex-shrink-0"><i class="bi bi-graph-up feature-icon"></i></div>
+            <div class="flex-grow-1 ms-3">
+              <h3>Dashboard Inteligente</h3>
+              <p>Visualize todos os KPIs do seu negócio em tempo real com nosso painel totalmente personalizável.</p>
+              <ul>
+                <li>Widgets personalizáveis por usuário</li>
+                <li>Gráficos interativos e responsivos</li>
+                <li>Exportação de relatórios em PDF/Excel</li>
+                <li>Alertas automáticos por e-mail</li>
+              </ul>
             </div>
-            <h3>Dashboard Inteligente</h3>
-            <p>Visualize todos os KPIs do seu negócio em tempo real com nosso painel personalizável.</p>
           </div>
         </div>
-        
-        <div class="col-md-4">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="bi bi-cart"></i>
+
+        <!-- Gestão de Vendas -->
+        <div class="col-md-6">
+          <div class="d-flex">
+            <div class="flex-shrink-0"><i class="bi bi-cart feature-icon"></i></div>
+            <div class="flex-grow-1 ms-3">
+              <h3>Gestão de Vendas</h3>
+              <p>Controle completo do ciclo de vendas: orçamentos, pedidos, faturamento e comissões.</p>
+              <ul>
+                <li>Cadastro de produtos e serviços</li>
+                <li>Emissão de orçamentos e pedidos</li>
+                <li>Integração com meios de pagamento</li>
+                <li>Controle de comissões por vendedor</li>
+              </ul>
             </div>
-            <h3>Gestão de Vendas</h3>
-            <p>Controle todo o ciclo de vendas, desde o orçamento até o recebimento.</p>
           </div>
         </div>
-        
-        <div class="col-md-4">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="bi bi-box-seam"></i>
+
+        <!-- Controle de Estoque -->
+        <div class="col-md-6">
+          <div class="d-flex">
+            <div class="flex-shrink-0"><i class="bi bi-box-seam feature-icon"></i></div>
+            <div class="flex-grow-1 ms-3">
+              <h3>Controle de Estoque</h3>
+              <p>Gerencie seu inventário com precisão, receba alertas e evite ruptura de estoque.</p>
+              <ul>
+                <li>Controle de estoque multi-filiais</li>
+                <li>Código de barras e QR Code</li>
+                <li>Integração com balanças</li>
+                <li>Histórico de movimentações</li>
+              </ul>
             </div>
-            <h3>Controle de Estoque</h3>
-            <p>Gerencie seu inventário com alertas automáticos para reposição.</p>
           </div>
         </div>
-        
-        <div class="col-md-4">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="bi bi-people"></i>
+
+        <!-- Gestão de Clientes -->
+        <div class="col-md-6">
+          <div class="d-flex">
+            <div class="flex-shrink-0"><i class="bi bi-people feature-icon"></i></div>
+            <div class="flex-grow-1 ms-3">
+              <h3>Gestão de Clientes (CRM)</h3>
+              <p>Centralize informações, histórico e interações dos seus clientes em um único lugar.</p>
+              <ul>
+                <li>Cadastro completo com CPF/CNPJ</li>
+                <li>Classificação por grupos e segmentos</li>
+                <li>Histórico de compras e atendimentos</li>
+                <li>Campanhas de marketing direcionado</li>
+              </ul>
             </div>
-            <h3>Gestão de Clientes</h3>
-            <p>Centralize todas as informações dos seus clientes em um único lugar.</p>
           </div>
         </div>
-        
-        <div class="col-md-4">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="bi bi-file-earmark-text"></i>
+
+        <!-- Financeiro -->
+        <div class="col-md-6">
+          <div class="d-flex">
+            <div class="flex-shrink-0"><i class="bi bi-cash-coin feature-icon"></i></div>
+            <div class="flex-grow-1 ms-3">
+              <h3>Financeiro Integrado</h3>
+              <p>Fluxo de caixa, contas a pagar/receber, DRE e conciliação bancária automática.</p>
+              <ul>
+                <li>Emissão de boletos e carnês</li>
+                <li>Conciliação bancária via OFX</li>
+                <li>DRE e balancete mensal</li>
+                <li>Integração contábil</li>
+              </ul>
             </div>
-            <h3>Relatórios Customizáveis</h3>
-            <p>Gere relatórios detalhados para todas as áreas do seu negócio.</p>
           </div>
         </div>
-        
-        <div class="col-md-4">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="bi bi-phone"></i>
+
+        <!-- Emissão de Notas -->
+        <div class="col-md-6">
+          <div class="d-flex">
+            <div class="flex-shrink-0"><i class="bi bi-receipt feature-icon"></i></div>
+            <div class="flex-grow-1 ms-3">
+              <h3>Emissão de Notas Fiscais</h3>
+              <p>Emita NF-e, NFC-e e NFS-e direto do sistema com validação automática da Receita.</p>
+              <ul>
+                <li>NF-e, NFC-e e NFS-e integradas</li>
+                <li>Validação automática de campos</li>
+                <li>Envio por e-mail ao cliente</li>
+                <li>Backup XML por 5 anos</li>
+              </ul>
             </div>
-            <h3>Acesso Mobile</h3>
-            <p>Acesse seu sistema de qualquer lugar através do nosso aplicativo.</p>
           </div>
+        </div>
+
+        <!-- Relatórios & BI -->
+        <div class="col-md-6">
+          <div class="d-flex">
+            <div class="flex-shrink-0"><i class="bi bi-file-earmark-bar-graph feature-icon"></i></div>
+            <div class="flex-grow-1 ms-3">
+              <h3>Relatórios & BI</h3>
+              <p>Gere relatórios detalhados e exportáveis para todas as áreas do seu negócio.</p>
+              <ul>
+                <li>Relatórios customizáveis por filtros</li>
+                <li>Exportação em PDF, Excel e CSV</li>
+                <li>Envio agendado por e-mail</li>
+                <li>Gráficos dinâmicos e comparativos</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Compras & Fornecedores -->
+        <div class="col-md-6">
+          <div class="d-flex">
+            <div class="flex-shrink-0"><i class="bi bi-truck feature-icon"></i></div>
+            <div class="flex-grow-1 ms-3">
+              <h3>Compras & Fornecedores</h3>
+              <p>Controle pedidos de compra, cotações e avaliação de fornecedores.</p>
+              <ul>
+                <li>Pedidos de compra com aprovação</li>
+                <li>Cotação automática com fornecedores</li>
+                <li>Avaliação de desempenho de fornecedores</li>
+                <li>Integração com XML de entrada</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Equipe & Usuários -->
+        <div class="col-md-6">
+          <div class="d-flex">
+            <div class="flex-shrink-0"><i class="bi bi-person-badge feature-icon"></i></div>
+            <div class="flex-grow-1 ms-3">
+              <h3>Gestão de Equipe & Usuários</h3>
+              <p>Controle de acessos, permissões e desempenho por colaborador.</p>
+              <ul>
+                <li>Perfis de acesso personalizados</li>
+                <li>Log de atividades por usuário</li>
+                <li>Metas e comissões configuráveis</li>
+                <li>Ponto eletrônico integrado</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Integrações -->
+        <div class="col-md-6">
+          <div class="d-flex">
+            <div class="flex-shrink-0"><i class="bi bi-plug feature-icon"></i></div>
+            <div class="flex-grow-1 ms-3">
+              <h3>Integrações & API</h3>
+              <p>Conecte marketplaces, e-commerces, ERPs e ferramentas de terceiros.</p>
+              <ul>
+                <li>API REST pública e documentada</li>
+                <li>Integração com Shopify, WooCommerce</li>
+                <li>Webhooks para eventos em tempo real</li>
+                <li>Conectores para bancos e gateways</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile -->
+        <div class="col-md-6">
+          <div class="d-flex">
+            <div class="flex-shrink-0"><i class="bi bi-phone feature-icon"></i></div>
+            <div class="flex-grow-1 ms-3">
+              <h3>App Mobile</h3>
+              <p>Gerencie seu negócio pelo celular, online ou offline, com sincronização automática.</p>
+              <ul>
+                <li>Leitura de código de barras via câmera</li>
+                <li>Consulta de estoque e clientes offline</li>
+                <li>Emissão de pedidos no PDV móvel</li>
+                <li>Notificações push em tempo real</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+  </section>
+
+  
+
+
+<!-- CTA Section -->
+<section class="py-5 exp text-center" >
+  <div class="container">
+    <div class="row gy-4">
+    <div class="col-lg-6">
+      <h2 class="mb-4 text-white">Qual é o seu segmento?</h2>
+      <p class="lead mb-4 text-white">Entre em contato e descubra como podemos personalizar nossa solução para sua empresa</p>
+      <a href="#cont" class="btn btn-primary btn-lg">Fale com Especialista</a>
+    </div>
+
+
+    <div class="col-lg-6">
+      <img src="./img/aa-removebg-preview.png" alt="Equipe SG-Yia" class="img-fluid rounded ii">
+    </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Sobre a Empresa -->
+<section id="about-company" class="py-5">
+  <div class="container">
+    <div class="row gy-4 align-items-center">
+      <div class="col-lg-6">
+        <h2 class="fw-bold mb-3">Quem Somos</h2>
+        <p>
+          Trabalhamos no mercado nacional, atuando no ramo das TICs.
+        </p>
+        <p>
+          Decidimos criar o SG-Yia com o intuito de apresentar ao nosso mercado que <strong>soluções nacionais agregam valor, estabilidade, confiabilidade e escalabilidade</strong> para as empresas que desejam crescer de forma organizada e produtiva.
+        </p>
+        <p class="mb-0">
+          A organização no processo de gestão faz o crescimento.
+        </p>
+      </div>
+      <!-- imagem da equipe -->
+      <div class="col-lg-6">
+        <img src="./img/solu.jpg" alt="Equipe SG-Yia" class="img-fluid rounded shadow">
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Missão, Visão e Valores -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4 text-center">
+      <div class="col-md-4 nos">
+        <i class="bi bi-bullseye feature-icon-lg mb-3"></i>
+        <h4 class="fw-bold">Missão</h4>
+        <p>
+          Democratizar o acesso a sistemas de gestão completos, seguros e fáceis de usar para empresas de todos os tamanhos.
+        </p>
+      </div>
+      <div class="col-md-4 nos color">
+        <i class="bi bi-eye feature-icon-lg mb-3"></i>
+        <h4 class="fw-bold">Visão</h4>
+        <p>
+          Ser a plataforma líder em gestão empresarial inteligente em Angola e referência em inovação na África.
+        </p>
+      </div>
+      <div class="col-md-4 nos">
+        <i class="bi bi-heart feature-icon-lg mb-3"></i>
+        <h4 class="fw-bold">Valores</h4>
+        <ul class="list-unstyled">
+          <li>Inovação constante</li>
+          <li>Transparência total</li>
+          <li>Suporte humanizado</li>
+          <li>Segurança em primeiro lugar</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Depoimentos -->
+<section id="testimonials" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">Descubra o que nossos clientes têm a dizer</h2>
+    <p class="text-center text-muted mb-5">Experiências que inspiram sucesso</p>
+
+    <div class="row g-4">
+    
+      <div class="col-md-4">
+        <div class="testimonial-card">
+
+
+          
+<!-- ===== FEEDBACKS ENVIADOS ===== -->
+<section class="py-5 bg-white">
+  <div class="container">
+    <div class="row g-4" id="feedbacks-list">
+      <!-- Feedbacks serão inseridos aqui -->
+    </div>
+  </div>
+</section>
+
+
+
+        </div>
+  </div>
+
+</section>
+<!-- Botão para abrir o popup -->
+<button type="button" class="btn feed text-center btn-primary" data-bs-toggle="modal" data-bs-target="#popupFeedback">
+Feedback
+</button>
+<!-- ===== BOTÃO CENTRAL ===== -->
+
+
+
+<!-- Modal Popup -->
+<div class="modal fade" id="popupFeedback" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Deixe seu Feedback</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-0">
+        <!-- ===== FORMULÁRIO MINI CENTRALIZADO ===== -->
+        <div id="formFeedbackArea" class="mx-auto my-4 p-4 bg-white rounded-4 shadow-lg"
+             style="max-width: 400px; border: 1px solid #dee2e6;">
+          <form id="formFeedback" class="row g-3">
+            <div class="col-md-12">
+              <label class="form-label">Seu nome</label>
+              <input type="text" class="form-control form-control-sm" name="nome" required>
+            </div>
+            <div class="col-md-12">
+              <label class="form-label">Classificação</label>
+              <select class="form-select form-select-sm" name="estrelas" required>
+                <option value="5">★★★★★</option>
+                <option value="4">★★★★</option>
+                <option value="3">★★★</option>
+                <option value="2">★★</option>
+                <option value="1">★</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Comentário</label>
+              <textarea class="form-control form-control-sm" name="comentario" rows="2" required></textarea>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Sua foto</label>
+              <input type="file" class="form-control form-control-sm" name="foto" accept="image/*" required>
+            </div>
+            <div class="col-12 text-center">
+              <button type="submit" class="btn btn-success btn-sm w-100">Enviar Feedback</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 
+<button class="btn btn-outline-danger btn-sm mt-3" onclick="limparFeedbacks()">
+  Limpar Feedbacks
+</button> -->
+
+
+
+<!-- Demostração -->
+
+
+
+<section id="demost" class="py-5">
+  <div class="container">
+
+<div class="row justify-content-center">
+  <div class="text-center"><h1 class="display-5 fw-bold mb-3 palavra">
+    Agende sua Demonstração <span>D</span><span>e</span><span>m</span><span>o</span><span>s</span><span>t</span><span>r</span><span>a</span><span>ç</span><span>ã</span><span>o</span> Gratuita 
+  </h1></div>
+        <div class="col-lg-8">
+          <h4 class="mb-4">Preencha o formulário e entraremos em contato</h4>
+          <form id="demoForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="name" class="form-label">Nome *</label>
+                <input type="text" class="form-control" id="name" name="name" required />
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label">E-mail corporativo *</label>
+                <input type="email" class="form-control" id="email" name="email" required />
+              </div>
+              <div class="col-md-6">
+                <label for="phone" class="form-label">Telefone *</label>
+                <input type="tel" class="form-control" id="phone" name="phone" required />
+              </div>
+              <div class="col-md-6">
+                <label for="company" class="form-label">Empresa *</label>
+                <input type="text" class="form-control" id="company" name="company" required />
+              </div>
+              <div class="col-12">
+                <label for="date" class="form-label">Data preferencial</label>
+                <input type="date" class="form-control" id="date" name="date" />
+              </div>
+              <div class="col-12">
+                <label for="message" class="form-label">Mensagem (opcional)</label>
+                <textarea class="form-control" name="message" rows="3" placeholder="Conte-nos sobre seu negócio ou dúvidas..."></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary px-4">Agendar Demonstração</button>
+              </div>
+            </div>
+          </form>
+          <div class="mt-3" id="demoMessage"></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Demo Section -->
+
+
+  <!-- FAQ Section -->
   <section class="py-5 bg-light">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6">
-          <img src="./img/IMG-20250508-WA0002.jpg " alt="Demonstração SG-Yia" class="img-fluid rounded shadow">
-        </div>
-        <div class="col-lg-6">
-          <h2 class="mb-4">Veja o SG-Yia em Ação</h2>
-          <p class="lead mb-4">Agende uma demonstração personalizada e descubra como nosso sistema pode transformar sua gestão empresarial.</p>
-          <a href="demo.html" class="btn btn-primary btn-lg">Agendar Demonstração</a>
+      <h2 class="text-center palavra mb-5">Perguntas Frequentes sobre a <span>Demostração</span></h2>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                  Quanto tempo dura a demonstração?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Aproximadamente 30 minutos, com tempo para perguntas ao final.
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                  Preciso instalar algo?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Não! A demostração é feita online via videoconferência. Você só precisa de internet.
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                  É realmente gratuita?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Sim, sem compromisso ou necessidade de cartão de crédito.
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="cta text-center">
-    <div class="container">
-      <h2 class="mb-4">Pronto para revolucionar sua gestão?</h2>
-      <p class="lead mb-5">Experimente gratuitamente por 14 dias. Sem necessidade de cartão de crédito.</p>
-      <a href="../GESTAO/login.php" class="btn btn-secondary btn-lg">Comece Agora</a>
+
+  
+
+
+
+<!-- contato-->
+
+
+<section id="cont" class="py-5">
+  <div class="container">
+
+
+    <div class="row g-4">
+      <div class="text-center"><h1 class="display-5 fw-bold mb-3 palavra">
+        Entre em <span>C</span><span>o</span><span>n</span><span>t</span><span>a</span><span>t</span><span>o</span>
+      </h1></div>
+      <!-- Informações de Contato -->
+      <div class="col-lg-5">
+        <h4 class="mb-4">Informações de Contato</h4>
+        <div class="contact-info mb-3">
+          <i class="bi bi-geo-alt"></i>
+          <span>Av. Tecnologia, 123 – Huambo, Angola</span>
+        </div>
+        <div class="contact-info mb-3">
+          <i class="bi bi-envelope"></i>
+          <span>contato@sg-yia.com</span>
+        </div>
+        <div class="contact-info mb-3">
+          <i class="bi bi-telephone"></i>
+          <span>+244 123 456 789</span>
+        </div>
+        <div class="mt-4">
+          <h5>Horário de Atendimento</h5>
+          <p>Segunda à Sexta: 08h00 – 17h00</p>
+        </div>
+        <div class="mt-4">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3931.1234567890!2d13.2345678!3d-8.1234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMDcnMjQuNCJTIDEzwrAxMyczNC41IkU!5e0!3m2!1spt!2sao!4v1650000000000"
+            width="100%"
+            height="250"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- Formulário -->
+      <div class="col-lg-7">
+        <h4 class="mb-4">Envie-nos uma Mensagem</h4>
+        <form id="contactForm" action="https://formspree.io/f/mnnzpoaq" method="POST">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="name" class="form-label">Nome *</label>
+              <input type="text" class="form-control" id="name" name="name" required />
+            </div>
+            <div class="col-md-6">
+              <label for="email" class="form-label">E-mail *</label>
+              <input type="email" class="form-control" id="email" name="email" required />
+            </div>
+            <div class="col-12">
+              <label for="subject" class="form-label">Assunto *</label>
+              <input type="text" class="form-control" id="subject" name="subject" required />
+            </div>
+            <div class="col-12">
+              <label for="message" class="form-label">Mensagem *</label>
+              <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary px-4">Enviar Mensagem</button>
+            </div>
+          </div>
+        </form>
+        <div class="mt-3" id="formMessage"></div>
+      </div>
     </div>
-  </section>
+
+  </div>
+</section>
+
+
+
+
+
 
   <!-- Footer -->
   <footer>
@@ -226,20 +1322,20 @@
             <a href="#"><i class="bi bi-instagram"></i></a>
           </div>
         </div>
-        <div class="col-lg-2 col-md-4 mb-4">
+        <div class="an col-lg-2 col-md-4 mb-4">
           <h5 class="mb-3">Produto</h5>
           <ul class="list-unstyled">
-            <li class="mb-2"><a href="recursos.html" class="text-white text-decoration-none">Recursos</a></li>
-            <li class="mb-2"><a href="PRECOS.HTML" class="text-white text-decoration-none">Preços</a></li>
-            <li class="mb-2"><a href="demo.html" class="text-white text-decoration-none">Demonstração</a></li>
+            <li class="mb-2"><a href="recursos.html" class="text-whit text-decoration-none">Recursos</a></li>
+            <li class="mb-2"><a href="PRECOS.HTML" class="text-whit text-decoration-none">Preços</a></li>
+            <li class="mb-2"><a href="demo.html" class="text-whit text-decoration-none">Demonstração</a></li>
           </ul>
         </div>
-        <div class="col-lg-2 col-md-4 mb-4">
+        <div class="an col-lg-2 col-md-4 mb-4">
           <h5 class="mb-3">Suporte</h5>
           <ul class="list-unstyled">
-            <li class="mb-2"><a href="#" class="text-white text-decoration-none">Central de Ajuda</a></li>
-            <li class="mb-2"><a href="#" class="text-white text-decoration-none">Tutoriais</a></li>
-            <li class="mb-2"><a href="contato.html" class="text-white text-decoration-none">Contato</a></li>
+            <li class="mb-2"><a href="#" class="text-whit text-decoration-none">Central de Ajuda</a></li>
+            <li class="mb-2"><a href="#" class="text-whit text-decoration-none">Tutoriais</a></li>
+            <li class="mb-2"><a href="contato.html" class="text-whit text-decoration-none">Contato</a></li>
           </ul>
         </div>
         <div class="col-lg-4 col-md-4 mb-4">
@@ -254,14 +1350,29 @@
           <p class="mb-0">© 2025 SG-Yia. Todos os direitos reservados.</p>
         </div>
         <div class="col-md-6 text-center text-md-end">
-          <a href="#" class="text-white text-decoration-none me-3">Termos de Serviço</a>
-          <a href="#" class="text-white text-decoration-none">Política de Privacidade</a>
+          <a href="#" class="an text-decoration-none me-3">Termos de Serviço</a>
+          <a href="#" class="an  text-decoration-none">Política de Privacidade</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <script src="./js/bootstrap.bundle.min.js
-  "></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/feed.js"></script>
+  <script src="./js/demo.js"></script>
+
+
+<!-- ===== TOGGLE SCRIPT ===== -->
+<script>
+  const btn = document.getElementById('btnToggleForm');
+  const area = document.getElementById('formFeedbackArea');
+
+  btn.addEventListener('click', () => {
+    const aberto = area.style.display === 'block';
+    area.style.display = aberto ? 'none' : 'block';
+    btn.textContent = aberto ? 'Deixar Feedback' : 'Ocultar formulário';
+  });
+</script>
+
 </body>
 </html>

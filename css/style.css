@@ -1,17 +1,12 @@
-  :root {
-      --primary:  #17a2b7;;
-      --primary-dark:  #17a2b7;;
-      --secondary: #f8f9fc;
-     
-      --light: #ffffff;
-    }
-    
+  
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f8f9fc;
+      font-family: arial, sans-serif;
+    
+
+
     }
 
-
+ 
   
     .hero {
       background: linear-gradient(135deg, var(--primary), var(--primary-dark));
@@ -51,18 +46,10 @@
     }
 
 
-    .section-header {
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-      color: white;
-      padding: 4rem 0;
-    }
+  
 
-     .navbar-dark {
-      background-color: #1a1a1a !important;
-    }
+
+
+
+
     
-    footer {
-      background: #1a1a1a;
-      color: white;
-      padding: 2rem 0;
-    }

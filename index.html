@@ -4,11 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="shortcut icon" href="./logo/LOGO-CHANAX-BLUE.png" type="image/x-icon">
   <title>SG-Yia | Sistema de Gestão Inteligente</title>
+                      
   <link href="./css/bootstrap.min.css" rel="stylesheet">
   <link href="./css/style.css" rel="stylesheet">
   <link href="./css/header.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css ">
   <style>
     :root {
       --primary: #17a2b7;
@@ -31,7 +33,7 @@
 
     /* HERO (estilo Sergest) */
     .hero {
-      background: #fff;
+      background: #f1f3f5;
       color: #000;
       padding: 3rem 0;
     }
@@ -91,12 +93,12 @@
     }
 
     .hero-btn-primary:hover {
-      background: #ffffff;
+      background: #f1f3f5;
       color: var(--primary-dark);
     }
 
     .hero-btn-primary2 {
-      background: #ffffff;
+      background: #f1f3f5;
       color: #ff0000;
       border: 1px solid #ff0000;
     }
@@ -277,7 +279,7 @@
     .whit {
       border: 0.1rem;
       border-radius: 5rem;
-      background: linear-gradient(to right, #00c4d9,#034489);
+      background: linear-gradient(to right, #3dd900,#038946);
       font-size: 0.7rem;
       padding: 0.1rem;
       margin-left: 0;
@@ -289,17 +291,9 @@
       }
     }
 
-    .bg-light {
-      border: 0.1rem solid rgba(0, 0, 0, .12);
-      border-radius: 1.5rem;
-      box-shadow: 0.1rem 0.1rem 0.4rem rgba(0, 0, 0, .15);
-    }
+   
 
-    @media (min-width: 768px) {
-      .bg-light {
-        border-radius: 3rem;
-      }
-    }
+    
 
     .pp {
       margin-bottom: 2rem;
@@ -378,9 +372,148 @@
       }
     }
 
-
-
+    /* Novos estilos para responsividade */
+    @media (max-width: 767px) {
+      .navbar-nav {
+        text-align: center;
+      }
+      
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      
+      .palavra span {
+        font-size: 1.8rem;
+      }
+      
+      .pricing-card {
+        margin-bottom: 1.5rem;
+      }
+      
+      .solution-card {
+        margin-bottom: 1.5rem;
+      }
+      
+      .feature-icon-lg {
+        font-size: 2rem;
+      }
+      
+      .timeline-item {
+        margin-bottom: 1.5rem;
+        padding-left: 1rem;
+        border-left: 2px solid var(--primary);
+      }
+    }
     
+    @media (max-width: 575px) {
+      .hero h1 {
+        font-size: 1.5rem;
+      }
+      
+      .palavra span {
+        font-size: 1.5rem;
+      }
+      
+      .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+      }
+      
+      .hero small {
+        text-align: center;
+      }
+    }
+    
+    .solution-card {
+      transition: transform 0.3s;
+    }
+    
+    .solution-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .feature-icon-lg {
+      font-size: 3rem;
+      color: var(--primary);
+    }
+    
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2rem;
+      padding-left: 2rem;
+    }
+    
+    .timeline-item:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.5rem;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: var(--primary);
+    }
+    
+    .testimonial-card {
+      background:transparent;
+      border-radius: 1rem;
+      padding: 1.5rem;
+     
+      margin-bottom: 1.5rem;
+      height: 100%;
+    }
+    
+    .contact-info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    
+    .contact-info i {
+      margin-right: 0.5rem;
+      color: var(--primary);
+    }
+    
+    .featured-badge {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--primary);
+      color: #ffffff;
+      padding: 0.25rem 1rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+    }
+    
+    .exp {
+      background: linear-gradient(to right, #00c4d9, #034489);
+    }
+    
+    .feed {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      border-radius: 50%;
+      width: 65px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+     
+    }
+    
+    .nos {
+      margin-bottom: 2rem;
+    }
+    
+    @media (max-width: 767px) {
+      .nos {
+        margin-bottom: 2.5rem;
+      }
+    }
   </style>
 </head>
 
@@ -388,7 +521,7 @@
   <!-- Navbar atualizada -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
     <div class="container">
-      <a class="navbar-brand active fw-bold text-primary fs-3" href="index.html">SG-Yia</a>
+      <a class="navbar-brand active fw-bold text-primary fs-3" href="index.html"><img src="./logo/LOGO-CHANAX-BLUE.png" class="rounded img-fluid" height="130" width="130" alt=""></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -397,11 +530,7 @@
           <li class="nav-item"><a class="nav-link fw-semibold" href="#pricing-section">Preços</a></li>
           <li class="nav-item"><a class="nav-link fw-semibold" href="#solution">Soluções</a></li>
           <li class="nav-item"><a class="nav-link fw-semibold" href="#features">Recursos</a></li>
-          
-         
           <li class="nav-item"><a class="nav-link fw-semibold" href="#about-company">Sobre</a></li>
-
-
           <li class="nav-item"><a class="nav-link fw-semibold" href="#cont">Contato</a></li>
           <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
             <a class="btn en btn-outline-primary fw-semibold px-3" href="../GESTAO/login.php">Entrar agora →</a>
@@ -420,16 +549,15 @@
             Gestão De <span>E</span><span>m</span><span>p</span><span>r</span><span>e</span><span>s</span><span>a</span> Online
           </h1>
           <p class="lead mb-4">
-            O SG-Yia revoluciona a forma como você gerencia seu negócio com ferramentas poderosas e intuitivas para todas as áreas da sua empresa.
+            Antes de começar a usar o sistema é necessário ter uma empresa registrada, o sistema não vem com dados para serem populados
           </p>
           <small class="text-muted mt-2 d-block">Teste o SG-Yia <span class="gra">gratuitamente</span> por <strong>15 dias</strong>. </small>
           <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
             <button class="btn btn-primary ln px-4">Começar a usar</button>
             <button class="btn ln2 btn-outline-danger px-4">Como usar</button>
           </div>
-         
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 text-center">
           <img src="./img/bdprinc.jpg" alt="Dashboard SG-Yia" class="img-fluid rounded">
         </div>
       </div>
@@ -443,8 +571,8 @@
       <p class="text-center pp">Gestão da sua empresa pelo computador, <br> tablet ou telemóvel a qualquer hora.</p>
       <div class="row g-4 justify-content-center">
         <!-- Starter Plan -->
-        <div class="col-md-8 col-lg-4">
-          <div class="card pricing-card">
+        <div class="col-md-8 col-lg-4 mb-4">
+          <div class="card pricing-card h-100">
             <div class="card-body p-4">
               <div class="absolute top-0 bottom-0 left-0 right-0"> <img src="./img/agt -logop-CtBjrJw3.jpeg" class="img" alt=""></div>
               <h5 class="fw-bold text-center titulo">Certificado pela AGT</h5>
@@ -459,10 +587,10 @@
         </div>
         
         <!-- Professional Plan -->
-        <div class="col-md-8 col-lg-4">
-          <div class="card pricing-card blue featured">
+        <div class="col-md-8 col-lg-4 mb-4">
+          <div class="card pricing-card blue featured h-100">
             <div class="card-body p-4">
-              <div class="absolute top-0 bottom-0 left-0 right-0"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEkAAABJCAMAAABGrfvuAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAUFQTFRFAAAALNXkK9XkQNrnYeDrjOjxou30re/1ru/1gubvQdnnVt7ql+ryl+vzbeLtTNzpQNroLNblN9jmTdzpjenxo+30buLtQdrobOLtl+vyQNnngufwQtrnmOvyV93pgebvTN3pNtflmOvzNtjmmOryo+3zYt/rQdrnV97qTdvocOLtn+zzv/L33/j7r+/1gObvg+bvou3z////YODr7/z90Pb5wPP3YN/rbOLskOrxQdrnMdflkOnx3/n77/v9pO30QNrnoOzzeOXuQtrocOPtUN3poO3zwPL3sO/1MNflTtzpQNnnNtfmj+nxYuDsjejxMNblz/X5d+Xud+Tuz/b5MNblQNro4Pn7MdblMNflMdblYuDrQdnnK9blTNzon+3z0PX54Pj7gOfvgOXvoezzYeDsN9fmbeLsjOjwNdfmV9/riQmSdAAAAGt0Uk5TABQNk////////5r/////4JMUWub///+a//+T/6D////gU/9T////mv/m/////////////////////6A6/////5r//6D//////y3smlP///8t/////zOa/zMzOv+gDeD/////////Wv//Tf+WZzAFAAAFJklEQVR4nNWY608cVRTAz53dnYVFB/Yl3fIqNAUkWAVJrLHVoKKt1FaJtppGY/3gP6WmqZq0H9DEmI3FltjER6pRKTWk9EF5pA9Y6BJ2WWBfs947MztzX7Ms6peeD5OZe2d+c86595x77kXwfwl6VEkIgf4fSR6ExXyvVPLk1Y1/R6rLKajEtfm2CjsloRpiD/IRpVbxXRChvJrGqoGC5JrJSYofczSElrj2kFpM4Su6Xy2pFnMi62vSnzRvpbGR61WRwvi1yMaqlEMk+FgCoHFhe1LbImh1c64cQy+UENUSSLEkRO5V5BDRshB6UJGEBwtq5A5iBbsAKcwgsqT2+6AV3D3ESEsCPDSKJamo6U51HBPVPONCiiVbblcNAui413pLToolteUdgACiKWoEKVLnPMTmdkRCKiibIqlrDryZHYEAumeh47pAiiXl3u7BMVxS0LIs1uCZ6z0TPKl1CbLim7tDavk2r/4pQfmh7SZH8kNwUc5RSMokOSYf+E0gYfuyLOnAhKCSwVF86Ffy8AJCGSkrmrI0QHaDPyXRJ/Cz0+J9PiOx0VbKInm8rEoHFTJRvL+zX7WFyTXnZ2AvXWmfpkiRNJMAXjQ4gcu8KTBYIBPFR9v48i/m8FkkPxwcpzTaAK92ScAYMoRWIDpGNeDpmddtUv0WY1yvWveTnGP95y/6OZoyzDNJtTpj3ID+xAV30qtJaPyeetayRsggC8ukt35mzHgZegiI9vkb44ZBJskPATq/9UNI6qXhuLTb75COXmTctHsX+9MyZ8Gn/GGSipMsqVC0SOF1Ow6JNHRA+KIAehN70hwInhRLFgsW6djY4W+306kX56L8JMhItTqJD4OkZZmhe2tBJL09D/bM4EladvgbizQSP/o13SV6HIM6Rq37d2e4blMR5KhHk7hZgH1kg+DEbcjccCGNxFnSyVt2POwvTgE87QFq0uOZ2XnehbRrlV3AB9fM4TYYyj40TYPgcKLca8lI3CadGmXGjvy15yvj7v2ZAihZH3Sdc3oHdC7bUGMXXi/lmD7KUVgrYMZq+AE/ssfH9kxbpL13udTbqzoG7PeyGW9wjU0FZI6TqJXGHTHPUePQJuOWfshO8aQTXzq54OQXTOeAznmVVmmyyLR0zVG5oFZ3VmVDsHeavpOBnsvDU2fZJnPoLBIXwlg+ugaxuIR0epL3EjaIBLCTx/cw0xaOLIHMvnfucDFn5HHDyRZJMI84Pf+3BCTk5QMTZtFlkXDZyC/BeHHLt7IGYpOd8CuLH5j1rrxA0PLxVYC+z53noVVdAmpdQltAk7pneZ+bKLsSGJ7Hq3v/Z/w7uNq0ot+uVaKpvivCa4dIJdCIk1GPQqqNBnGdOPZDiatVSKVAZiqvVsapSet/FLqxl5Ca4khYTdm+Bp4NGCWjUiNdAalq2SEFN0sffip729PbuLEpq+eMQrChvHOjat9To2zRv73svWvbxtbjLQlx/CqKiqidALNHiKZ2hGJ3Auy+hSn6twe571vgk7Poyav8ftwdRFdvwk4xmgIhbGQSTiNn2KQkstcSC3NBcNHN75bEffDxC8jbdENopqVrFsHjK1yjZG+O4wZ8uvvMMg4lisJZhvS8IJIGCGlyvepzuvwQQH6G8crNBL72XeMVa3/tDP6gpW1c8o3buUpzaYUcz5xenho8b2TpzsX30BlD4ZoZ6RcVznq6V9LWO84MUz8457Z1r3z+FDpyOZeyQFrp9Uv8iU31JFOCAFWcITyyJ35VyT9IEbJZMyMUBAAAAABJRU5ErkJggg==" class="w-[4em] fa" alt=""> <strong class="st titulo text-white fw-bold">Fácil & seguro</strong>  </div>
+              <div class="absolute top-0 bottom-0 left-0 right-0"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEkAAABJCAMAAABGrfvuAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAUFQTFRFAAAALNXkK9XkQNrnYeDrjOjxou30re/1ru/1gubvQdnnVt7ql+ryl+vzbeLtTNzpQNroLNblN9jmTdzpjenxo+30buLtQdrobOLtl+vyQNnngufwQtrnmOvyV93pgebvTN3pNtflmOvzNtjmmOryo+3zYt/rQdrnV97qTdvocOLtn+zzv/L33/j7r+/1gObvg+bvou3z////YODr7/z90Pb5wPP3YN/rbOLskOrxQdrnMdflkOnx3/n77/v9pO30QNrnoOzzeOXuQtrocOPtUN3poO3zwPL3sO/1MNflTtzpQNnnNtfmj+nxYuDsjejxMNblz/X5d+Xud+Tuz/b5MNblQNro4Pn7MdblMNflMdblYuDrQdnnK9blTNzon+3z0PX54Pj7gOfvgOXvoezzYeDsN9fmbeLsjOjwNdfmV9/riQmSdAAAAGt0Uk5TABQNk////////5r/////4JMUWub///+a//+T/6D////gU/9T////mv/m/////////////////////6A6/////5r//6D//////y3smlP///8t/////zOa/zMzOv+gDeD/////////Wv//Tf+WZzAFAAAFJklEQVR4nNWY508cVRTAz53dnYVFB/Yl3fIqNAUkWAVJrLHVoKKt1FaJtppGY/3gP6WmqZq0H9DEmI3FltjER6pRKTWk9EF5pA9Y6BJ2WWBfs947MztzX7Ms6peeD5OZe2d+c86595x77kXwfwl6VEkIgf4fSR6ExXyvVPLk1Y1/R6rLKajEtfm2CjsloRpiD/IRpVbxXRChvJrGqoGC5JrJSYofczSElrj2kFpM4Su6Xy2pFnMi62vSnzRvpbGR61WRwvi1yMaqlEMk+FgCoHFhe1LbImh1c64cQy+UENUSSLEkRO5V5BDRshB6UJGEBwtq5A5iBbsAKcwgsqT2+6AV3D3ESEsCPDSKJamo6U51HBPVPONCiiVbblcNAui413pLToolteUdgACiKWoEKVLnPMTmdkRCKiibIqlrDryZHYEAumeh47pAiiXl3u7BMVxS0LIs1uCZ6z0TPKl1CbLin7tDavk2r/4pQfmh7SZH8kNwUc5RSMokOSYf+E0gYfuyLOnAhKCSwVF86Ffy8AJCGSkrmrI0QHaDPyXRJ/Cz0+J9PiOx0VbKInm8rEoHFTJRvL+zX7WFyTXnZ2AvXWmfpkiRNJMAXjQ4gcu8KTBYIBPFR9v48i/m8FkkPxwcpzTaAK92ScAYMoRWIDpGNeDpmddtUv0WY1yvWveTnGP95y/6OZoyzDNJtTpj3ID+xAV30qtJaPyeetayRsggC8ukt35mzHgZegiI9vkb44ZBJskPATq/9UNI6qXhuLTb75COXmTctHsX+9MyZ8Gn/GGSipMsqVC0SOF1Ow6JNHRA+KIAehN70hwInhRLFgsW6djY4W+306kX56L8JMhItTqJD4OkZZmhe2tBJL09D/bM4EladvgbizQSP/o13SV6HIM6Rq37d2e4blMR5KhHk7hZgH1kg+DEbcjccCGNxFnSyVt2POwvTgE87QFq0uOZ2XnehbRrlV3AB9fM4TYYyj40TYPgcKLca8lI3CadGmXGjvy15yvj7v2ZAihZH3Sdc3oHdC7bUGMXXi/lmD7KUVgrYMZq+AE/ssfH9kxbpL13udTbqzoG7PeyGW9wjU0FZI6TqJXGHTHPUePQJuOWfshO8aQTXzq54OQXTOeAznmVVmmyyLR0zVG5oFZ3VmVDsHeavpOBnoe2pQAAIABJREFUHsudU2fZJnPoLBIXwlg+ugaxuIR0epL3EjaIBLCTx/cw0xaOLIHMvnfucDFn5HHDyRZJMI84Pf+3BCTk5QMTZtFlkXDZyC/BeHHLt7IGYpOd8CuLH5j1rrxA0PLxVYC+z53noVVdAmpdQltAk7pneZ+bKLsSGJ7Hq3v/Z/w7uNq0ot+uVaKpvivCa4dIJdCIk1GPQqqNBnGdOPZDiatVSKVAZiqvVsapSet/FLqxl5Ca4khYTdm+Bp4NGCWjUiNdAalq2SEFN0sffip729PbuLEpq+eMQrChvHOjat9To2zRv73svWvbxtbjLQlx/CqKiqidALNHiKZ2hGJ3Auy+hSn6twe571vgk7Poyav8ftwdRFdvwk4xmgIhbGQSTiNn2KQkstcSC3NBcNHN75bEffDxC8jbdENopqVrFsHjK1yjZG+O4wZ8uvvMMg4lisJZhvS8IJIGCGlyvepzuvwQQH6G8crNBL72XeMVa3/tDP6gpW1c8o3buUpzaYUcz5xenho8b2TpzsX30BlD4ZoZ6RcVznq6V9LWO84MUz8457Z1r3z+FDpyOZeyQFrp9Uv8iU31JFOCAFWcITyyJ35VyT9IEbJZMyMUBAAAAABJRU5ErkJggg==" class="w-[4em] fa" alt=""> <strong class="st titulo text-white fw-bold">Fácil & seguro</strong>  </div>
               <p class="text-white">SG-Yia integra-se diretamente ao Multicaixa Express — receba pagamentos em segundos, com criptografia de ponta a ponta que blinda os dados sensíveis da sua empresa.
                 Interface limpa, intuitiva e em português: qualquer colaborador navega, clica e conclui tarefas sem treino.</p>
             </div>
@@ -470,19 +598,17 @@
         </div>
         
         <!-- Enterprise Plan -->
-        <div class="col-md-8 col-lg-4">
-          <div class="card pricing-card">
+        <div class="col-md-8 col-lg-4 mb-4">
+          <div class="card pricing-card h-100">
             <div class="card-body p-4">
               <div class="absolute top-0 bottom-0 left-0 right-0">
-                <img src="data:image/png;base64,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" class="w-[4em]" alt=""><strong class="st titulo">Angolano</strong>
+                <img src="data:image/png;base64,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" class="w-[4em]" alt=""><strong class="st titulo">Angolano</strong>
               </div>
               <p>SG-Yia, certificado AGT nº 310, gere tudo em conformidade com as leis fiscais angolanas: emite faturas eletrónicas, calcula impostos automaticamente, exporta SAF-T AO e envia dados em tempo real para a AGT — tudo numa única plataforma segura e 100 % legal.</p>
             </div>
           </div>
         </div>
       </div>
-      
-     
     </div>
   </section>
 
@@ -495,16 +621,16 @@
     </div>
     <div class="row g-4 justify-content-center">
       <!-- Starter Plan -->
-      <div class="col-md-8 col-lg-4">
-        <div class="card pricing-card featured ">
-          <div class="featured-badge fw-bold fs-6 mb-5">Starter</div>
-          <div class="card-body p-4 ">
+      <div class="col-md-8 col-lg-4 mb-4">
+        <div class="card pricing-card featured h-100 position-relative">
+          <div class="featured-badge">Starter</div>
+          <div class="card-body p-4">
             <ul class="list-unstyled mb-4 mt-4">
-              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>Até 500 produtos</li>
-              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>1 usuário</li>
-              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>1 loja física</li>
-              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>NF-e e NFC-e</li>
-              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>Suporte via chat</li>
+              <li class="mb-2"><i class="bi bi-check text-white whit me-2"></i>Até 500 produtos</li>
+              <li class="mb-2"><i class="bi bi-check text-white whit me-2"></i>1 usuário</li>
+              <li class="mb-2"><i class="bi bi-check text-white whit me-2"></i>1 loja física</li>
+              <li class="mb-2"><i class="bi bi-check text-white whit me-2"></i>NF-e e NFC-e</li>
+              <li class="mb-2"><i class="bi bi-check text-white whit me-2"></i>Suporte via chat</li>
               <li class="text-muted mb-2"><i class="bi bi-x text-white danger me-2"></i>E-commerce</li>
               <li class="text-muted mb-2"><i class="bi bi-x text-white danger me-2"></i>Integrações</li>
             </ul>
@@ -515,18 +641,18 @@
       </div>
       
       <!-- Professional Plan -->
-      <div class="col-md-8 col-lg-4">
-        <div class="card pricing-card featured ">
-          <div class="featured-badge fw-bold fs-6 mb-5">Professional</div>
-          <div class="card-body p-4 ">
+      <div class="col-md-8 col-lg-4 mb-4">
+        <div class="card pricing-card featured h-100 position-relative">
+          <div class="featured-badge">Professional</div>
+          <div class="card-body p-4">
             <ul class="list-unstyled mb-4 mt-4">
-              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>Produtos ilimitados</li>
-              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>3 usuários</li>
-              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>3 lojas/filiais</li>
-              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>Tudo do Starter</li>
-              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>E-commerce B2C</li>
-              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>Integrações básicas</li>
-              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>Suporte prioritário</li>
+              <li class="mb-2"><i class="bi bi-check text-white whit me-2"></i>Produtos ilimitados</li>
+              <li class="mb-2"><i class="bi bi-check text-white whit me-2"></i>3 usuários</li>
+              <li class="mb-2"><i class="bi bi-check text-white whit me-2"></i>3 lojas/filiais</li>
+              <li class="mb-2"><i class="bi bi-check text-white whit me-2"></i>Tudo do Starter</li>
+              <li class="mb-2"><i class="bi bi-check text-white whit me-2"></i>E-commerce B2C</li>
+              <li class="mb-2"><i class="bi bi-check text-white whit me-2"></i>Integrações básicas</li>
+              <li class="mb-2"><i class="bi bi-check text-white whit me-2"></i>Suporte prioritário</li>
             </ul>
             <h2 class="text-primary mb-3">26000 Kzs<span class="text-muted fs-6">/mês</span></h2>
             <a href="#demost" class="btn btn-primary w-100">Começar Grátis</a>
@@ -535,18 +661,18 @@
       </div>
       
       <!-- Enterprise Plan -->
-      <div class="col-md-8 col-lg-4">
-        <div class="card pricing-card featured">
-          <div class="featured-badge fw-bold fs-6 mb-5">Enterprise</div>
-          <div class="card-body p-4 ">
+      <div class="col-md-8 col-lg-4 mb-4">
+        <div class="card pricing-card featured h-100 position-relative">
+          <div class="featured-badge">Enterprise</div>
+          <div class="card-body p-4">
             <ul class="list-unstyled mb-4 mt-4">
-              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>Recursos ilimitados</li>
-              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>Usuários ilimitados</li>
-              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>Filiais ilimitadas</li>
-              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>Tudo do Professional</li>
-              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>E-commerce B2B/B2C</li>
-              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>API aberta</li>
-              <li class="mb-2"><i class="bi bi-check text-white white me-2"></i>Suporte dedicado</li>
+              <li class="mb-2"><i class="bi bi-check text-white whit me-2"></i>Recursos ilimitados</li>
+              <li class="mb-2"><i class="bi bi-check text-white whit me-2"></i>Usuários ilimitados</li>
+              <li class="mb-2"><i class="bi bi-check text-white whit me-2"></i>Filiais ilimitadas</li>
+              <li class="mb-2"><i class="bi bi-check text-white whit me-2"></i>Tudo do Professional</li>
+              <li class="mb-2"><i class="bi bi-check text-white whit me-2"></i>E-commerce B2B/B2C</li>
+              <li class="mb-2"><i class="bi bi-check text-white whit me-2"></i>API aberta</li>
+              <li class="mb-2"><i class="bi bi-check text-white whit me-2"></i>Suporte dedicado</li>
             </ul>
             <h2 class="text-primary mb-3">49000 Kzs<span class="text-muted fs-6">/mês</span></h2>
             <a href="#demost" class="btn btn-outline-primary w-100">Solicitar Proposta</a>
@@ -558,7 +684,7 @@
     <!-- Custom Plan -->
     <div class="row mt-5">
       <div class="col-lg-8 mx-auto">
-        <div class="card bg-light">
+        <div class="card ">
           <div class="card-body p-4 text-center">
             <h4>Plano Personalizado</h4>
             <p class="mb-4">Precisa de algo específico? Podemos criar um plano sob medida para sua empresa.</p>
@@ -576,7 +702,7 @@
 
 
   <!-- FAQ Section -->
-  <section class="py-5 bg-light">
+  <section class="py-5 ">
     <div class="container">
       <h2 class="text-center mb-5">Perguntas Frequentes</h2>
       <div class="row">
@@ -635,11 +761,11 @@
       <div class="text-center"><h1 class="display-5 fw-bold mb-3 palavra">
         Soluções para seu <span>N</span><span>e</span><span>g</span><span>ó</span><span>c</span><span>i</span><span>o</span> 
       </h1></div>
-      <div class="col-lg-4">
+      <div class="col-lg-4 col-md-6">
         <div class="card solution-card h-100">
           <div class="card-body p-4">
             <div class="text-center mb-4">
-              <i class="bi bi-shop" style="font-size: 3rem; color: var(--primary);"></i>
+              <i class="bi bi-shop feature-icon-lg"></i>
             </div>
             <h4 class="card-title text-center">Comércio Varejista</h4>
             <p class="card-text">Solução completa para lojas físicas e e-commerce. Controle de estoque, PDV, vendas online e integração com marketplaces.</p>
@@ -654,11 +780,11 @@
         </div>
       </div>
       
-      <div class="col-lg-4">
+      <div class="col-lg-4 col-md-6">
         <div class="card solution-card h-100">
           <div class="card-body p-4">
             <div class="text-center mb-4">
-              <i class="bi bi-building" style="font-size: 3rem; color: var(--primary);"></i>
+              <i class="bi bi-building feature-icon-lg"></i>
             </div>
             <h4 class="card-title text-center">Indústria</h4>
             <p class="card-text">Controle completo da produção, desde a compra de matéria-prima até a entrega do produto final.</p>
@@ -673,11 +799,11 @@
         </div>
       </div>
       
-      <div class="col-lg-4">
+      <div class="col-lg-4 col-md-6">
         <div class="card solution-card h-100">
           <div class="card-body p-4">
             <div class="text-center mb-4">
-              <i class="bi bi-truck" style="font-size: 3rem; color: var(--primary);"></i>
+              <i class="bi bi-truck feature-icon-lg"></i>
             </div>
             <h4 class="card-title text-center">Distribuição</h4>
             <p class="card-text">Otimização da cadeia logística e distribuição com controle de rotas, entregas e frotas.</p>
@@ -692,11 +818,11 @@
         </div>
       </div>
       
-      <div class="col-lg-4">
+      <div class="col-lg-4 col-md-6">
         <div class="card solution-card h-100">
           <div class="card-body p-4">
             <div class="text-center mb-4">
-              <i class="bi bi-hospital" style="font-size: 3rem; color: var(--primary);"></i>
+              <i class="bi bi-hospital feature-icon-lg"></i>
             </div>
             <h4 class="card-title text-center">Serviços</h4>
             <p class="card-text">Gestão de prestadores de serviço, agendamento e controle de atendimentos com foco na experiência do cliente.</p>
@@ -704,18 +830,18 @@
               <li><i class="bi bi-check-circle text-success me-2"></i>Agendamento online</li>
               <li><i class="bi bi-check-circle text-success me-2"></i>Controle de atendimentos</li>
               <li><i class="bi bi-check-circle text-success me-2"></i>Gestão de equipes</li>
-              <li><i class="bi bi-check-circle text-success me-2"></i>Avaliação de clientes</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Avaliação de clients</li>
             </ul>
             <a href="#demost" class="btn btn-outline-primary w-100">Solicitar Demo</a>
           </div>
         </div>
       </div>
       
-      <div class="col-lg-4">
+      <div class="col-lg-4 col-md-6">
         <div class="card solution-card h-100">
           <div class="card-body p-4">
             <div class="text-center mb-4">
-              <i class="bi bi-cash-coin" style="font-size: 3rem; color: var(--primary);"></i>
+              <i class="bi bi-cash-coin feature-icon-lg"></i>
             </div>
             <h4 class="card-title text-center">Franquias</h4>
             <p class="card-text">Gestão centralizada de múltiplas unidades com controle de royalties, vendas e operações padronizadas.</p>
@@ -730,11 +856,11 @@
         </div>
       </div>
       
-      <div class="col-lg-4">
+      <div class="col-lg-4 col-md-6">
         <div class="card solution-card h-100">
           <div class="card-body p-4">
             <div class="text-center mb-4">
-              <i class="bi bi-laptop" style="font-size: 3rem; color: var(--primary);"></i>
+              <i class="bi bi-laptop feature-icon-lg"></i>
             </div>
             <h4 class="card-title text-center">Startups</h4>
             <p class="card-text">Solução escalável e econômica para empresas em crescimento com recursos essenciais e plano de expansão.</p>
@@ -961,7 +1087,7 @@
 <!-- CTA Section -->
 <section class="py-5 exp text-center" >
   <div class="container">
-    <div class="row gy-4">
+    <div class="row gy-4 align-items-center">
     <div class="col-lg-6">
       <h2 class="mb-4 text-white">Qual é o seu segmento?</h2>
       <p class="lead mb-4 text-white">Entre em contato e descubra como podemos personalizar nossa solução para sua empresa</p>
@@ -970,10 +1096,11 @@
 
 
     <div class="col-lg-6">
-      <img src="./img/aa-removebg-preview.png" alt="Equipe SG-Yia" class="img-fluid rounded ii">
+      <img src="./img/aa-removebg-preview.png" alt="Equipe SG-Yia" class="ii img-fluid d-none d-md-block rounded ">
     </div>
     </div>
   </div>
+  
 </section>
 
 
@@ -1032,10 +1159,48 @@
   </div>
 </section>
 
-<!-- Depoimentos -->
-<section id="testimonials" class="py-5 bg-light">
+
+
+<!-- Linha do tempo -->
+<section class="py-5 ">
   <div class="container">
-    <h2 class="text-center mb-5">Descubra o que nossos clientes têm a dizer</h2>
+    <h2 class="text-center mb-5">Nossa Trajetória</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="timeline-item">
+          <h5 class="fw-bold">2025 – Fundação</h5>
+          <p>Idealização do projeto SG-Yia por profissionais de TI e contabilidade.</p>
+        </div>
+        <div class="timeline-item">
+          <h5 class="fw-bold">2025 – MVP</h5>
+          <p>Lançamento da primeira versão beta com foco em faturação e estoque.</p>
+        </div>
+        <div class="timeline-item">
+          <h5 class="fw-bold">2025 – Certificação AGT</h5>
+          <p>Software aprovado pela AGT para emissão de documentos fiscais eletrônicos.</p>
+        </div>
+        <div class="timeline-item">
+          <h5 class="fw-bold">2025 – Expansão</h5>
+          <p>Novos módulos: CRM, financeiro, BI e integração bancária.</p>
+        </div>
+        <div class="timeline-item">
+          <h5 class="fw-bold">2025 – Mobile</h5>
+          <p>Lançamento do aplicativo para Android e iOS com modo offline.</p>
+        </div>
+        <div class="timeline-item">
+          <h5 class="fw-bold">2025 – Presente</h5>
+          <p>Mais de empresas confiam no SG-Yia para crescer com eficiência.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Depoimentos -->
+<section id="testimonials" class="py-5 ">
+  <div class="container">
+    <h2 class="text-center mb-5">Descubra o que nossos clientes têm a dizer </h2>
     <p class="text-center text-muted mb-5">Experiências que inspiram sucesso</p>
 
     <div class="row g-4">
@@ -1046,7 +1211,7 @@
 
           
 <!-- ===== FEEDBACKS ENVIADOS ===== -->
-<section class="py-5 bg-white">
+<section class="py-5 ">
   <div class="container">
     <div class="row g-4" id="feedbacks-list">
       <!-- Feedbacks serão inseridos aqui -->
@@ -1133,7 +1298,7 @@ Feedback
   </h1></div>
         <div class="col-lg-8">
           <h4 class="mb-4">Preencha o formulário e entraremos em contato</h4>
-          <form id="demoForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <form id="demoForm" action="https://formspree.io/f/YOUR_FORM_ID " method="POST">
             <div class="row g-3">
               <div class="col-md-6">
                 <label for="name" class="form-label">Nome *</label>
@@ -1173,7 +1338,7 @@ Feedback
 
 
   <!-- FAQ Section -->
-  <section class="py-5 bg-light">
+  <section class="py-5 ">
     <div class="container">
       <h2 class="text-center palavra mb-5">Perguntas Frequentes sobre a <span>Demostração</span></h2>
       <div class="row">
@@ -1260,7 +1425,7 @@ Feedback
         </div>
         <div class="mt-4">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3931.1234567890!2d13.2345678!3d-8.1234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMDcnMjQuNCJTIDEzwrAxMyczNC41IkU!5e0!3m2!1spt!2sao!4v1650000000000"
+            src="https://www.google.com/maps/embed?pb= !1m18!1m12!1m3!1d3931.1234567890!2d13.2345678!3d-8.1234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMDcnMjQuNCJTIDEzwrAxMyczNC41IkU!5e0!3m2!1spt!2sao!4v1650000000000"
             width="100%"
             height="250"
             style="border:0;"
@@ -1273,7 +1438,7 @@ Feedback
       <!-- Formulário -->
       <div class="col-lg-7">
         <h4 class="mb-4">Envie-nos uma Mensagem</h4>
-        <form id="contactForm" action="https://formspree.io/f/mnnzpoaq" method="POST">
+        <form id="contactForm" action="https://formspree.io/f/mnnzpoaq " method="POST">
           <div class="row g-3">
             <div class="col-md-6">
               <label for="name" class="form-label">Nome *</label>

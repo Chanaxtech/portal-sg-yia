@@ -10,7 +10,7 @@
     footer {
       background: linear-gradient( to right, #00c4d9,#034489 );
       
-      color: #000;
+      color: #000000;
       padding: 2rem 0;
     }
 
@@ -21,13 +21,13 @@
     }
     .an{
 
-        color: #000;
+        color: #000000;
     }
 
 
     footer .text-whit{
 
-        color: #000;
+        color: #000000;
     }
 
     .btn{
@@ -43,6 +43,7 @@ font-size: 1rem;
     .ln2{
       margin-left: 0;
       margin-right: 0;
+      border: #ff000083 !important;
     }
 
 
@@ -143,11 +144,7 @@ font-size: 1rem;
         margin-bottom: 1rem;
       }
     
-      /* Ajusta títulos */
-      .palavra span,
-      h2 {
-        font-size: 1.4rem;
-      }
+   
     
       /* Ajusta formulários */
       .form-control,

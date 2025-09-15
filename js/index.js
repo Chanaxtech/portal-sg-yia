@@ -22,3 +22,18 @@ const form = document.getElementById('contactForm');
         messageDiv.innerHTML = '<div class="alert alert-danger">Erro de conexão.</div>';
       }
     });
+
+
+
+
+  
+  // Adicione um evento de clique a todos os links da navegação
+  document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      // Feche a navegação ao clicar em um link
+      const navbarToggle = document.querySelector('.navbar-toggler');
+      if (navbarToggle) {
+        navbarToggle.click();
+      }
+    });
+  });
